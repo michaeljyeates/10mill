@@ -50,15 +50,15 @@ rm config.ini
 wget https://raw.githubusercontent.com/michaeljyeates/10mill/master/config.ini
 ```
 
-7. Procure a public / private key pair for your node
+8. Procure a public / private key pair for your node
 
 Contact the Community Testnet to request a keypair
 
-8. Fill in the relevant values in the config.ini file
+9. Fill in the relevant values in the config.ini file
 
 See inline comments
 
-9. Fire it up!
+10. Fire it up!
 
 ```
 ./eosd --recursive
