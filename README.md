@@ -61,7 +61,7 @@ See inline comments
 10. Fire it up!
 
 ```
-./eosd --recursive
+./eosd
 ```
 ### Troubleshooting
 
