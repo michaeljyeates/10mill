@@ -61,7 +61,7 @@ See inline comments
 10. Fire it up!
 
 ```
-./eosd --replay  > community-testnet.log 2>&1
+./eosd --replay  > community-testnet.log 2>&1 &
 tail -F community-testnet.log
 ```
 ### Troubleshooting
