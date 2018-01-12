@@ -4,7 +4,7 @@
 This repo contains needed files to get new EOS Community TestNet Block Producers and Full Nodes off the ground.
 
 ### Hardware Requirements
-This is still largely unknown.  There is a report of a machine with 2 GB of ram and 1 core producing blocks and not dropping connections.  Most folks are using at least 16g of ram and 4 cpus.
+This is still largely unknown.  There is a report of a machine with 1 GB of ram and 1 core producing blocks and not dropping connections.  Most folks are using at least 16g of ram and 4 cpus.
 
 ### Software Requirements
 There are reports of Ubuntu 16.04, 17.04, and 17.10 working correctly.
@@ -34,31 +34,25 @@ sudo mkdir /data
 cd /data
 sudo wget https://raw.githubusercontent.com/michaeljyeates/10mill/master/genesis.json
 ```
-6. Run eosd to create config.ini file
+
+6. Grab the config.ini from repo
 
 ```
-cd ~/eos/build/programs/eosd
-./eosd
-```
-Now kill it with ctrl+c
-
-7. Grab the config.ini from repo
-
-```
+mkdir data-dir
 cd data-dir
 rm config.ini
 wget https://raw.githubusercontent.com/michaeljyeates/10mill/master/config.ini
 ```
 
-8. Procure a public / private key pair for your node
+7. Procure a public / private key pair for your node
 
 Contact the Community Testnet to request a keypair
 
-9. Fill in the relevant values in the config.ini file
+8. Fill in the relevant values in the config.ini file
 
 See inline comments
 
-10. Fire it up!
+9. Fire it up!
 
 ```
 ./eosd --replay  > community-testnet.log 2>&1 &
