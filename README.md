@@ -1,4 +1,30 @@
-## EOS Community TestNet
+## EOS Community TestNet (SuperheroNet)
+
+          __
+        (\\\   IIIIII
+        ) (`   | C  O
+       /  \    |     D
+       | _)    |   x=|     __
+       (  `-.  `-] [-'  .-`  `-_...__/\\\
+        \ \  `--`   `--`  `-`        _.n)
+         \ `-`         <`-..--`--..-`
+          `-.(    )(    )-`
+             (\ o /\ o /)
+              \`-`][`-`/
+               ( _][_ )
+               )\ () /(
+              /-..__..-\
+             |-.      .-|
+             |  \    /  |
+             |   `><`   |
+             (    ||    )
+              \. _/\_ ./
+              (   ()   )
+              |   )(   |
+              \  /  \  /
+               \ |  | /
+              /` )  ( `\
+            ()Oo/    \oO()
 
 ### About
 This repo contains needed files to get new EOS Community TestNet Block Producers and Full Nodes off the ground.
@@ -12,14 +38,14 @@ There are reports of Ubuntu 16.04, 17.04, and 17.10 working correctly.
 ### Steps to Stand up new BP
 
 1. Provision server infrastructure
-2. Open ports 9876 and 8888 to the world
-3. Download [DAWN-2018-01-05](https://github.com/EOSIO/eos/tree/DAWN-2018-01-05)
+2. Open ports 1337 and 8888 to the world
+3. Download [DAWN-2018-01-25-ALPHA](https://github.com/EOSIO/eos/tree/DAWN-2018-01-25-ALPHA)
 
 ```
 cd ~
 git clone https://github.com/eosio/eos --recursive
 cd eos
-git checkout tags/DAWN-2018-01-05
+git checkout tags/DAWN-2018-01-25-ALPHA
 ```
 
 4. Compile
@@ -27,6 +53,11 @@ git checkout tags/DAWN-2018-01-05
 ```
 ./build.sh ubuntu
 ```
+
+4.1 Confirm version
+
+```eosiod --version``` should equal 2831591733
+
 5. Grab the genesis json from this repo
 
 ```
@@ -55,9 +86,9 @@ See inline comments
 9. Fire it up!
 
 ```
-./eosd --replay  > community-testnet.log 2>&1 &
+./eosiod --replay  > community-testnet.log 2>&1 &
 tail -F community-testnet.log
 ```
 ### Troubleshooting
 
-* if there are errors when starting using the --replay flag, try deleting the data-dir/blocks and data-dir/blockchain directories
+* if there are errors when starting using the --replay flag, try ```rm -rf data-dir/blocks && rm -rf data-dir/shared_mem```
