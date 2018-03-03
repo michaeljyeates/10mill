@@ -39,13 +39,13 @@ There are reports of Ubuntu 16.04, 17.04, and 17.10 working correctly.
 
 1. Provision server infrastructure
 2. Open ports 1337 and 8888 to the world
-3. Download [DAWN-2018-01-25-ALPHA](https://github.com/EOSIO/eos/tree/DAWN-2018-01-25-ALPHA)
+3. Download [SuperDawn-2018-03-02](https://github.com/EOSIO/eos/tree/SuperDawn-2018-03-02)
 
 ```
 cd ~
 git clone https://github.com/eosio/eos --recursive
 cd eos
-git checkout tags/DAWN-2018-01-25-ALPHA
+git checkout tags/SuperDawn-2018-03-02
 ```
 
 4. Compile
@@ -56,7 +56,7 @@ git checkout tags/DAWN-2018-01-25-ALPHA
 
 4.1 Confirm version
 
-```eosiod --version``` should equal 2831591733
+```eosiod --version``` should equal 2325692710
 
 5. Grab the genesis json from this repo
 
