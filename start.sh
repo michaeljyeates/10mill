@@ -1,12 +1,15 @@
 #!/bin/bash
 
-CLEOS=/data/bin/master/cleos/cleos
+CLEOS=/home/<user>/testnets/<testnetName>/eos/build/cleos/cleos
 HOST=localhost
-PORT=8822
+PORT=8888
 WALLET_HOST=localhost
-WALLET_PORT=3456
-EOS_BUILD_DIR=/data/src/master/build
+WALLET_PORT=8000
+EOS_BUILD_DIR=/home/<user>/testnets/<testnetName>/eos/build
 EOSIO_KEY=EOS7rgcwNPrpgd9FSGAyg6Qn5pHE3sV1nYhiXDRDB2rtVkoh7BX7H
+
+
+# Do not modify below here
 
 
 $CLEOS -H $HOST -p $PORT --wallet-host $WALLET_HOST --wallet-port $WALLET_PORT set contract eosio $EOS_BUILD_DIR/contracts/eosio.bios/ -p eosio
